@@ -1,0 +1,43 @@
+/* @define-color workspaces-active #e30b0b; */
+@define-color workspaces-active #07AFD7;
+@define-color foreground #eeeeee;
+@define-color foreground-inactive #aaaaaa;
+@define-color background #000000;
+
+* {
+	font-family: JetBrainsMono Nerd Font;
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+}
+
+#waybar {
+    color: @foreground;
+    background-color: rgba(10, 10, 11, 0.95);
+}
+
+/* 
+#waybar {
+    color: @foreground;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+*/
+
+#workspaces button {
+    color: @workspaces-active;
+    padding-left: 0.3em;
+	padding-right: 0.8em;
+}
+
+#workspaces button.empty {
+    color: @foreground-inactive;
+}
+
+#temperature,
+#memory,
+#wireplumber,
+#idle_inhibitor,
+#network,
+#tray {
+    padding-right: 1em 
+}

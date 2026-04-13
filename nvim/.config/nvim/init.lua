@@ -1,0 +1,5 @@
+require("options")
+require("keybinds")
+require("plugins.themes")
+require("plugins.lsp")
+require("config.lazy")
