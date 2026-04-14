@@ -6,7 +6,8 @@
 
     "modules-left": ["hyprland/workspaces", "custom/metar"],
     "modules-center": ["clock", "clock#1"],
-    "modules-right": ["custom/bluetooth", "wireplumber", "custom/sunsetr", "memory", "cpu", "temperature", "tray"],
+    "modules-right": ["custom/bluetooth", "battery", "wireplumber", 
+					  "custom/sunsetr", "memory", "cpu", "temperature", "tray"],
     "hyprland/workspaces": {
         "format": "<span size='larger'>{icon}</span>",
         "on-click": "activate",
@@ -31,6 +32,17 @@
 		"on-click": "kitty bluetui"
 	},
 
+	"battery": {
+		"interval": 60,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}{capacity}% ",
+		"format-icons": [" ", " ", " ", " ", " "],
+		"max-length": 25
+	},
+
 	"custom/metar": {
 		"format": "{text}",
 		"tooltip": true,
@@ -40,7 +52,7 @@
 	},
 
 	"custom/sunsetr": {
-		"format": "\ue30d {text}K ",
+		"format": " {text}K ",
 		"tooltip": false,
 		"interval": 60,
 		"exec-on-event": true,
@@ -77,7 +89,7 @@
 	},
 
     "wireplumber": {
-        "format": "\udb81\udd7e {volume}%",
+        "format": "󰕾 {volume}%",
         "max-volume": 100,
         "scroll-step": 5,
 		"on-click": "pavucontrol"
