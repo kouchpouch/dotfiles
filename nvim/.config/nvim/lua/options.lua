@@ -1,6 +1,8 @@
 -- Sets line numbers relative to the cursor. The cursor is still absolute line.
 vim.cmd("set number relativenumber")
 
+vim.opt.termguicolors = true
+
 -- Highlights the line where the cursor is
 vim.cmd("set cursorline")
 

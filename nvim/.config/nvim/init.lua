@@ -3,3 +3,4 @@ require("keybinds")
 require("plugins.themes")
 require("plugins.lsp")
 require("config.lazy")
+vim.opt.termguicolors = true
