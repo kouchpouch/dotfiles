@@ -1,0 +1,5 @@
+# Ignore system specific configurations
+
+/hypr/.config/hypr/monitors.conf
+/hypr/.config/hypr/hyprpaper.conf
+/hypr/.config/hypr/mainmod.conf
