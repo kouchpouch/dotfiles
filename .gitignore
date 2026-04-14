@@ -5,3 +5,5 @@
 /hypr/.config/hypr/mainmod.conf
 
 /waybar/.config/waybar/config
+
+/nvim/.config/nvim/lazy-lock.json

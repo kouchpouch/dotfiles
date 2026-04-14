@@ -1,5 +1,6 @@
 # Lines configured by zsh-newuser-install
 alias v='nvim'
+alias sv='sudo -E nvim'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias btw='fastfetch'
