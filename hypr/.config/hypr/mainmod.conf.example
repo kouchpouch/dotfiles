@@ -1,0 +1,3 @@
+# Set the main modifier key here, if nothing is set, ALT is default.
+# $mainMod = ALT
+# $mainMod = SUPER

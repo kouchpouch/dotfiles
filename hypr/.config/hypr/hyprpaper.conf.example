@@ -1,0 +1,15 @@
+# Set your wallpaper(s) here
+
+wallpaper {
+	monitor = DP-1 # $ hyprctl monitors to list monitors
+	path = ~/.config/hypr/wallpapers/landscape/earthset.jpg
+	fit_mode = cover
+}
+
+#wallpaper {
+#	monitor = DP-2
+#	path = ~/.config/hypr/wallpapers/portrait/stars.png
+#	fit_mode = cover
+#}
+
+splash = false
