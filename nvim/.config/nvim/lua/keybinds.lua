@@ -23,6 +23,7 @@ vim.keymap.set('n', '<leader>no', ':noh<CR>')
 -- -- Remove "CTRL-W, Q" from closing the active window, I was hitting this all
 -- -- the time.
 vim.keymap.set('n', '<C-w>q', '<nop>')
+vim.keymap.set('n', '<C-w>c', '<nop>')
 
 -- Make "CTRL-C" behave the exact same as <esc>, makes the LSP diagnostics not
 -- disappear. I use CTRL-C almost exclusively and this bugged me.
