@@ -6,7 +6,8 @@
 
     "modules-left": [
 		"hyprland/workspaces",
-		"custom/metar"
+		"custom/metar",
+		"tray"
 	],
     "modules-center": [
 		"clock",
