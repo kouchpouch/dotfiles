@@ -4,10 +4,25 @@
     "height": 24,
     "spacing": 5,
 
-    "modules-left": ["hyprland/workspaces", "custom/metar"],
-    "modules-center": ["clock", "clock#1"],
-    "modules-right": ["custom/bluetooth", "battery", "wireplumber", 
-					  "custom/sunsetr", "memory", "cpu", "temperature", "tray"],
+    "modules-left": [
+		"hyprland/workspaces",
+		"custom/spacer",
+		"custom/metar"
+	],
+    "modules-center": [
+		"clock",
+		"clock#1"
+	],
+    "modules-right": [
+		"custom/bluetooth",
+		"wireplumber", 
+		"custom/sunsetr",
+		"memory",
+		"cpu",
+		"temperature",
+		"tray"
+	],
+
     "hyprland/workspaces": {
         "format": "<span size='larger'>{icon}</span>",
         "on-click": "activate",
@@ -28,7 +43,7 @@
     },
 
 	"custom/bluetooth": {
-		"format": "󰂯  ",
+		"format": "󰂯",
 		"on-click": "kitty bluetui"
 	},
 
@@ -38,7 +53,7 @@
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{icon}{capacity}% ",
+		"format": "{icon}{capacity}%",
 		"format-icons": [" ", " ", " ", " ", " "],
 		"max-length": 25
 	},
@@ -52,7 +67,7 @@
 	},
 
 	"custom/sunsetr": {
-		"format": " {text}K ",
+		"format": " {text}K",
 		"tooltip": false,
 		"interval": 60,
 		"exec-on-event": true,
@@ -97,7 +112,7 @@
 
 	"cpu": {
 		"interval": 2,
-		"format": "CPU {usage}% ",
+		"format": " {usage}%",
 		"on-click": "kitty btop"
 	},
 
@@ -137,4 +152,3 @@
         }
     }
 }
-
