@@ -1,18 +1,37 @@
-/* @define-color workspaces-active #e30b0b; */
+/* Nightfly Colors https://github.com/bluz71/vim-nightfly-colors */
+@define-color red-norm #FC514E;
+@define-color green-norm #A1CD5E;
+@define-color yellow-norm #E3D18A;
+@define-color blue-norm #82AAFF;
+@define-color purple-norm #C792EA;
+@define-color cyan-norm #7FDBCA;
+@define-color white-norm #A1AAB8;
+
+@define-color red-bright #FF5874;
+@define-color green-bright #21C7A8;
+@define-color yellow-bright #ECC48D;
+@define-color blue-bright #82AAFF;
+@define-color purple-bright #AE81FF;
+@define-color cyan-bright #7FDBCA;
+@define-color white-bright #D6DEEB;
+
 @define-color workspaces-active #07AFD7;
-@define-color foreground #eeeeee;
-@define-color foreground-inactive #aaaaaa;
-@define-color background #000000;
 
 * {
 	font-family: JetBrainsMono Nerd Font;
+	font-weight: bold;
     font-size: 17px;
     padding: 0;
     margin: 0;
 }
 
+#custom-spacer {
+	color: gray;
+	font-size:20px;
+}
+
 #waybar {
-    color: @foreground;
+    color: @white-bright;
     background-color: rgba(10, 10, 11, 0.95);
     padding: 0;
     margin: 0;
@@ -20,18 +39,36 @@
 
 #workspaces button {
     color: @workspaces-active;
-    padding-left: 0.3em;
-	padding-right: 0.8em;
+    padding-left: 0.25em;
+    padding-right: 0.5em;
 }
 
 #workspaces button.empty {
-    color: @foreground-inactive;
+    color: @white-norm;
 }
 
 #custom-bluetooth {
-    color: @workspaces-active;
+	color: @blue-bright;
 }
 
+#wireplumber {
+	color: @green-bright;
+}
+
+#custom-sunsetr {
+	color: @yellow-bright;
+}
+
+#memory {
+	color: @red-bright;
+}
+
+#cpu,
+#temperature {
+	color: @purple-bright;
+}
+
+#workspaces,
 #custom-bluetooth,
 #wireplumber,
 #custom-sunsetr,
@@ -39,5 +76,6 @@
 #cpu,
 #temperature,
 #tray {
-    padding-right: 0.75em 
+    padding-right: 0.5em;
+    padding-left: 0.5em;
 }
