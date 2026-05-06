@@ -51,6 +51,10 @@
 	color: @blue-bright;
 }
 
+#battery {
+	color: @cyan-bright;
+}
+
 #wireplumber {
 	color: @green-bright;
 }
