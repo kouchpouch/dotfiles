@@ -1,5 +1,8 @@
 -- https://wiki.hypr.land/Configuring/Start/
 
+---- AUTOSTART ----
+require("hyprexec")
+
 --- Monitors ---
 hl.monitor({
     output   = "",
@@ -15,9 +18,6 @@ local terminal    = "kitty"
 local fileManager = "nemo"
 local menu        = "rofi -show drun"
 local browser     = "firefox"
-
----- AUTOSTART ----
-require("hyprexec")
 
 ---- ENVIRONMENT VARIABLES ----
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
@@ -147,10 +147,9 @@ hl.config({
         kb_model   = "",
         kb_options = "",
         kb_rules   = "",
-
         follow_mouse = 1,
-
-        sensitivity = -0.5, -- -1.0 - 1.0
+        sensitivity = 0, -- -1.0 - 1.0
+		accel_profile = "flat",
 
         touchpad = {
             natural_scroll = false,
@@ -247,24 +246,23 @@ hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home
 
 ---- WINDOWS AND WORKSPACES ----
 
-hl.dsp.workspace.move({
-	workspace = 1,
-	monitor = "DP-1"
-})
+--hl.dsp.workspace.move({
+--	workspace = 1,
+--	monitor = "DP-1"
+--})
+--
+--hl.dsp.workspace.move({
+--	workspace = 2,
+--	monitor = "DP-2"
+--})
 
-hl.dsp.workspace.move({
-	workspace = 2,
-	monitor = "DP-2"
-})
+require("windowrules")
 
-local suppressMaximizeRule = hl.window_rule({
-    -- Ignore maximize requests from all apps. You'll probably like this.
+hl.window_rule({
     name  = "suppress-maximize-events",
     match = { class = ".*" },
-
     suppress_event = "maximize",
 })
--- suppressMaximizeRule:set_enabled(false)
 
 -- Fix some dragging issues with XWayland
 hl.window_rule({
@@ -281,13 +279,10 @@ hl.window_rule({
     no_focus = true,
 })
 
-require("windowrules")
-
 -- Hyprland-run windowrule
 hl.window_rule({
     name  = "move-hyprland-run",
     match = { class = "hyprland-run" },
-
     move  = "20 monitor_h-120",
     float = true,
 })
