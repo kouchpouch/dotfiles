@@ -1,0 +1,10 @@
+{
+  "workspace": {
+    "library": [
+      "/home/tn/.config/hypr"
+    ]
+  },
+  "diagnostics": {
+    "globals": ["hl"]
+  }
+}
