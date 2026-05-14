@@ -4,6 +4,14 @@
 /hypr/.config/hypr/bind_overrides.conf
 /hypr/.config/hypr/hyprpaper.conf
 /hypr/.config/hypr/mainmod.conf
+/hypr/.config/hypr/hyprlangbackup/monitors.conf
+/hypr/.config/hypr/hyprlangbackup/bind_overrides.conf
+/hypr/.config/hypr/hyprlangbackup/hyprpaper.conf
+/hypr/.config/hypr/hyprlangbackup/mainmod.conf
+/hypr/.config/hypr/monitors.lua
+/hypr/.config/hypr/bind_overrides.lua
+/hypr/.config/hypr/hyprpaper.lua
+/hypr/.config/hypr/mainmod.lua 
 
 /waybar/.config/waybar/config
 
