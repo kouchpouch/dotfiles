@@ -238,11 +238,11 @@ hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- Hyprshot
-	-- Take screenshot of region
-hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/tn/media/screenshots -- /home/tn/Pictures/screenshots/zipline-script-file.sh"))
+-- Take screenshot of region
+hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
 
-	-- Take screenshot of entire monitor
-hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/tn/media/screenshots -- /home/tn/Pictures/screenshots/zipline-script-file.sh"))
+-- Take screenshot of entire monitor
+hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
 
 ---- WINDOWS AND WORKSPACES ----
 
