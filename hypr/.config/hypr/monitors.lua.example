@@ -1,0 +1,25 @@
+-- Dual 2K monitors, left landscape, right portait
+hl.monitor({
+    output   = "DP-1",
+    mode     = "2560x1440@144",
+    position = "1440x500",
+    scale    = 1.0,
+})
+
+hl.monitor({
+    output   = "DP-2",
+    mode     = "2560x1440@144",
+    position = "auto",
+    scale    = 1.0,
+	transform = 1, -- Rotation/flip
+})
+
+-- Single 2K monitor @ 60hz
+--[[
+hl.monitor({
+    output   = "DP-1",
+    mode     = "2560x1440@60",
+    position = "auto",
+    scale    = 1.0,
+})
+]]
