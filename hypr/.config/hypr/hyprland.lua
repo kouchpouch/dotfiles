@@ -1,7 +1,7 @@
 -- https://wiki.hypr.land/Configuring/Start/
 
 ---- AUTOSTART ----
-require("hyprexec")
+require("exec")
 
 --- Monitors ---
 hl.monitor({
@@ -150,6 +150,9 @@ hl.config({
         follow_mouse = 1,
         sensitivity = 0, -- -1.0 - 1.0
 		accel_profile = "flat",
+
+		repeat_rate = 20,
+		repeat_delay = 300,
 
         touchpad = {
             natural_scroll = false,
