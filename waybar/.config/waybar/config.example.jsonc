@@ -6,7 +6,7 @@
 
     "modules-left": [
 		"hyprland/workspaces",
-		"custom/metar",
+		"custom/spacer",
 		"tray"
 	],
     "modules-center": [
@@ -23,7 +23,7 @@
 		"memory",
 		"custom/spacer",
 		"cpu",
-		"temperature",
+		"temperature"
 	],
 
     "hyprland/workspaces": {
