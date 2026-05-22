@@ -3,7 +3,7 @@
 ---- AUTOSTART ----
 require("exec")
 
---- Monitors ---
+---- MONITORS ----
 hl.monitor({
     output   = "",
     mode     = "preferred",
@@ -27,7 +27,6 @@ hl.env("HYPRCURSOR_SIZE", "40")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 ----- PERMISSIONS -----
--- 
 
 ---- LOOK AND FEEL ----
 
@@ -133,7 +132,9 @@ hl.config({
 hl.config({
     misc = {
         force_default_wallpaper = 0,
+		-- Disables the hyprland logo
         disable_hyprland_logo   = true,
+		-- Disables the message of the day
 		disable_splash_rendering = true
     },
 })
@@ -151,6 +152,8 @@ hl.config({
         sensitivity = 0, -- -1.0 - 1.0
 		accel_profile = "flat",
 
+		-- repeat_rate and repeat_delay make all keyboard-repeat (holding down
+		-- a key) faster.
 		repeat_rate = 20,
 		repeat_delay = 300,
 
@@ -243,10 +246,14 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 -- Hyprshot
 -- Take screenshot of region
-hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
+hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots"))
 
 -- Take screenshot of entire monitor
-hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
+hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots"))
+
+-- If you use zipline (a self hosted image sharing application), this will run the zipline script to upload your screenshot. Adjust this as required.
+--hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
+--hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
 
 ---- WINDOWS AND WORKSPACES ----
 
@@ -291,7 +298,11 @@ hl.window_rule({
     float = true,
 })
 
--- CSGO Vulcan Fix
+-- Counter-Strike 2 Vulcan Fix. This allows Counter-Strike 2 to be ran at a 
+-- different than native resolution/aspect ratio. I use this to play the game
+-- with a 4:3 aspect ratio stretched onto a 16:9 display. 
+-- This requires the hyprland plugin to be installed, see their documentation 
+-- for more details.
 function setup_vkfix()
     if hl.plugin.csgo_vulkan_fix ~= nil then
         hl.plugin.csgo_vulkan_fix.vkfix_app({ app = "SDL Application", w = 1920, h = 1440 })
