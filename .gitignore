@@ -14,5 +14,7 @@
 /hypr/.config/hypr/mainmod.lua 
 
 /waybar/.config/waybar/config
+/waybar/.config/waybar/flight_tracker_module
+/waybar/.config/waybar/flight_tracker_module/
 
 /nvim/.config/nvim/lazy-lock.json
