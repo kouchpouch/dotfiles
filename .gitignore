@@ -12,6 +12,7 @@
 /hypr/.config/hypr/bind_overrides.lua
 /hypr/.config/hypr/hyprpaper.lua
 /hypr/.config/hypr/mainmod.lua 
+/hypr/.config/hypr/hyprland.lua
 
 /waybar/.config/waybar/config
 /waybar/.config/waybar/flight_tracker_module
