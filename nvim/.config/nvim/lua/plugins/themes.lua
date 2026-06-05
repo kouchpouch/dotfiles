@@ -1,5 +1,8 @@
 return {
 	{
+
+	},
+	{
 		"miikanissi/modus-themes.nvim", priority = 1000
 	},
 	{
@@ -12,8 +15,5 @@ return {
 		"bluz71/vim-nightfly-colors",
 		name = "nightfly",
 		lazy = false,
-		config = function()
-			vim.cmd("colorscheme nightfly")
-		end
 	},
 }
