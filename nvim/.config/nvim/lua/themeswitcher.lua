@@ -1,0 +1,20 @@
+local dark_theme = "nightfly"
+local light_theme = "modus_operandi"
+
+-- Switch to dark theme
+vim.keymap.set('n', '<leader>cd', function()
+	vim.cmd("set background=dark")
+	vim.cmd("colorscheme " .. dark_theme)
+	require('lualine').setup {
+		options = { theme = dark_theme },
+	}
+end)
+
+-- Switch to light theme
+vim.keymap.set('n', '<leader>cl', function()
+	vim.cmd("set background=light")
+	vim.cmd("colorscheme " .. light_theme)
+	require('lualine').setup {
+		options = { theme = light_theme },
+	}
+end)

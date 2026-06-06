@@ -6,6 +6,8 @@ alias grep='grep --color=auto'
 alias btw='fastfetch'
 
 export TERM='xterm-256color'
+export EDITOR='nvim'
+export MANPAGER='nvim +Man!'
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

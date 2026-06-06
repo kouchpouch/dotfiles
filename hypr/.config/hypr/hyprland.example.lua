@@ -66,7 +66,7 @@ hl.config({
         },
 
         blur = {
-            enabled   = false,
+            enabled   = true,
             size      = 4,
             passes    = 2,
             vibrancy  = 0.1696,
@@ -74,7 +74,7 @@ hl.config({
     },
 
     animations = {
-        enabled = false;
+        enabled = true,
     },
 })
 
@@ -246,14 +246,14 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 -- Hyprshot
 -- Take screenshot of region
---hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots"))
+hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots"))
 
 -- Take screenshot of entire monitor
---hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots"))
+hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots"))
 
 -- If you use zipline (a self hosted image sharing application), this will run the zipline script to upload your screenshot. Adjust this as required.
-hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
-hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
+--hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
+--hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
 
 ---- WINDOWS AND WORKSPACES ----
 
