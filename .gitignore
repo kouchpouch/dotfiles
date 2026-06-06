@@ -15,6 +15,7 @@
 /hypr/.config/hypr/hyprland.lua
 
 /waybar/.config/waybar/config
+/waybar/.config/waybar/config.jsonc
 /waybar/.config/waybar/flight_tracker_module
 /waybar/.config/waybar/flight_tracker_module/
 
