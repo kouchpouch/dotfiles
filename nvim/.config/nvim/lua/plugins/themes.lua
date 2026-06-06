@@ -1,5 +1,8 @@
 return {
 	{
+		"D0nw0r/dark2026.nvim"
+	},
+	{
 		"miikanissi/modus-themes.nvim"
 	},
 	{
