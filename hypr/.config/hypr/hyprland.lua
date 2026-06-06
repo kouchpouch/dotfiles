@@ -66,7 +66,7 @@ hl.config({
         },
 
         blur = {
-            enabled   = true,
+            enabled   = false,
             size      = 4,
             passes    = 2,
             vibrancy  = 0.1696,
@@ -74,7 +74,7 @@ hl.config({
     },
 
     animations = {
-        enabled = true,
+        enabled = false;
     },
 })
 
