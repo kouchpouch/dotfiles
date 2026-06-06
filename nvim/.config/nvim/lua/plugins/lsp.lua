@@ -32,6 +32,13 @@ return {
 				"docker_compose_language_service",
 			},
 		}
+	-- Removes the 'undefined global "vim" error'
+		vim.lsp.config("lua_ls", {
+			settings = {
+				Lua = {
+					diagnostics = {
+						globals = { "vim" }}}}
+		})
 
 	-- Set up nvim-cmp.
 	local cmp = require'cmp'
