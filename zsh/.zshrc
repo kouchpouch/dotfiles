@@ -14,6 +14,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 zstyle ':completion:*' menu select
+bindkey -e
 
 #
 # End of lines configured by zsh-newuser-install
