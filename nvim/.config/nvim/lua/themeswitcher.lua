@@ -1,5 +1,5 @@
 local dark_theme = "nightfly"
-local light_theme = "modus_operandi"
+local light_theme = "modus"
 
 -- Switch to dark theme
 vim.keymap.set('n', '<leader>cd', function()
@@ -15,6 +15,8 @@ vim.keymap.set('n', '<leader>cl', function()
 	vim.cmd("set background=light")
 	vim.cmd("colorscheme " .. light_theme)
 	require('lualine').setup {
-		options = { theme = light_theme },
+		options = { theme = "modus" },
 	}
+	vim.cmd("colorscheme " .. light_theme) -- For whatever reason I need to 
+										   -- call this twice
 end)
