@@ -1,19 +1,10 @@
 local F = {}
 
-function F.switch_light (theme)
-	vim.cmd("set background=light")
+function F.switch_theme (theme, ll_theme, background)
+	vim.cmd("set background=" .. background)
 	vim.cmd("colorscheme " .. theme)
 	require('lualine').setup {
-		options = { theme = theme },
-	}
-	vim.cmd("colorscheme " .. theme)
-end
-
-function F.switch_dark (theme)
-	vim.cmd("set background=dark")
-	vim.cmd("colorscheme " .. theme)
-	require('lualine').setup {
-		options = { theme = theme },
+		options = { theme = ll_theme },
 	}
 	vim.cmd("colorscheme " .. theme)
 end

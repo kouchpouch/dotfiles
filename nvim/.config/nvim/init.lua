@@ -1,5 +1,7 @@
-Light_theme = "modus"
-Dark_theme = "nightfly"
+vim.opt.shada:append('!')
+if (vim.g.THEME_INDEX == nil or vim.g.THEME_INDEX < 1 or vim.g.THEME_INDEX > 4) then
+	vim.g.THEME_INDEX = 1
+end
 
 require("options")
 require("keybinds")
@@ -9,7 +11,5 @@ require("config.lazy")
 require("config.lualine")
 require("config.modus_theme")
 require("custom_mods.themeswitcher")
-
-vim.cmd("colorscheme " .. Dark_theme)
 
 vim.opt.termguicolors = true
