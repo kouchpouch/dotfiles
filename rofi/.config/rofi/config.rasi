@@ -167,3 +167,5 @@ show-icons: true;
       sorting-method:    "name";
   }
 }
+
+@theme "/home/tn/.local/share/rofi/themes/rounded-blue-dark.rasi"
