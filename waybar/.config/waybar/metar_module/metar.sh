@@ -32,6 +32,8 @@ while true;
 do
 	raw_metar=$(curl https://aviationweather.gov/api/data/metar?ids=${airport})
 	counter=1
+	finalstring=""
+	formatted=""
 
 	while [ "$formatted" != "RMK" ]; do
 		formatted=$(echo $raw_metar | awk '{print $'$counter'}')
