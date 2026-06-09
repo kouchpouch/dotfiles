@@ -11,7 +11,7 @@ local l_themes = {
 	"nightfly",
 	"modus",
 	"tomorrow_night",
-	"onelight",
+	"modus",
 }
 
 local bg = {
