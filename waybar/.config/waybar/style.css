@@ -47,6 +47,10 @@
     color: @white-norm;
 }
 
+#custom-gsettings {
+	color: @white-bright;
+}
+
 #custom-bluetooth {
 	color: @blue-bright;
 }
@@ -76,6 +80,7 @@
 	padding-right: 0.5em;
 }
 
+#custom-gsettings,
 #custom-flight_tracker,
 #workspaces,
 #battery,

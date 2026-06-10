@@ -14,6 +14,8 @@
 		"clock#1"
 	],
     "modules-right": [
+		"custom/gsettings",
+		"custom/spacer",
 		"custom/bluetooth",
 		"custom/spacer",
 		"wireplumber", 
@@ -47,6 +49,11 @@
 
 	"custom/spacer": {
 		"format": "|"
+	},
+
+	"custom/gsettings": {
+		"format": "",
+		"on-click": "$HOME/.config/waybar/gsettings/colorswitcher.sh",
 	},
 
 	"custom/bluetooth": {
