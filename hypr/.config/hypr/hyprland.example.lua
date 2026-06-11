@@ -108,7 +108,7 @@ hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 1.39, bezier = "
 hl.animation({ leaf = "workspaces",    enabled = false,  speed = 1.94, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "workspacesIn",  enabled = false,  speed = 1.21, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "workspacesOut", enabled = false,  speed = 1.94, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })
+hl.animation({ leaf = "zoomFactor",    enabled = false,  speed = 7,    bezier = "quick" })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
@@ -182,13 +182,12 @@ hl.device({
 
 ---- KEYBINDINGS ----
 
-mainMod = "SUPER" -- Sets Left ALT
+local mainMod = "SUPER" -- Sets Left ALT
 require("mainmod")
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(terminal))
-local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
--- closeWindowBind:set_enabled(false)
+hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
@@ -221,6 +220,26 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
     hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
 end
+
+local max_zoom = 10.0
+local zoom_increment = 0.2
+
+local function zoom_in()
+	local current = hl.get_config("cursor.zoom_factor")
+	zoom_increment = zoom_increment * 2
+	if current + zoom_increment < max_zoom then
+		current = current + zoom_increment;
+	end
+	hl.config({ cursor = { zoom_factor = current } })
+end
+
+local function zoom_reset()
+	zoom_increment = 0.1
+	hl.config({ cursor = { zoom_factor = 1 } })
+end
+
+hl.bind(mainMod .. " + EQUAL", zoom_in)
+hl.bind(mainMod .. " + MINUS", zoom_reset)
 
 -- Example special workspace (scratchpad)
 --hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
