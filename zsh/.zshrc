@@ -10,8 +10,8 @@ export EDITOR='nvim'
 export MANPAGER='nvim +Man!'
 
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 
 zstyle ':completion:*' menu select
 bindkey -e
