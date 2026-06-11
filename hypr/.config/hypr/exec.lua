@@ -1,8 +1,10 @@
 hl.on("hyprland.start", function ()
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 	hl.exec_cmd("systemctl --user start swaync")
+	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	hl.exec_cmd("/usr/lib/xdg-desktop-portal-hyprland")
 	hl.exec_cmd("/usr/lib/xdg-desktop-portal-gtk")
+	hl.exec_cmd("/usr/lib/xdg-desktop-portal")
 	hl.exec_cmd("hyprctl dispatch workspace 1")
 	hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
 
