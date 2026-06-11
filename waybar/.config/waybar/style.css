@@ -39,6 +39,15 @@
 
 #workspaces button {
     color: @workspaces-active;
+	border-radius: 0;
+    padding-left: 0.25em;
+    padding-right: 0.5em;
+}
+
+#workspaces button.active {
+    color: @workspaces-active;
+	border-radius: 0;
+	border-bottom: 2px solid;
     padding-left: 0.25em;
     padding-right: 0.5em;
 }
