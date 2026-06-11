@@ -89,7 +89,11 @@
 	padding-right: 0.5em;
 }
 
-#custom-gsettings,
+#custom-gsettings {
+	padding-right: 0.75em;
+	padding-left: 0.5em;
+}
+
 #custom-flight_tracker,
 #workspaces,
 #battery,
