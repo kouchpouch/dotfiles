@@ -1,15 +1,28 @@
-vim.opt.shada:append('!')
-if (vim.g.THEME_INDEX == nil or vim.g.THEME_INDEX < 1 or vim.g.THEME_INDEX > 4) then
-	vim.g.THEME_INDEX = 1
-end
+vim.opt.shada = "'1000,f1,<500,!,h"
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		local theme_index = vim.g.THEME_INDEX
+		if theme_index then
+		else
+			vim.g.THEME_INDEX = 1
+		end
+	end,
+})
 
 require("options")
 require("keybinds")
 require("plugins.themes")
 require("plugins.lsp")
 require("config.lazy")
-require("config.lualine")
 require("config.modus_theme")
-require("custom_mods.themeswitcher")
-
+require("config.lualine")
 vim.opt.termguicolors = true
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		if vim.g.lazy_did_setup then
+			require("custom_mods.themeswitcher")
+		end
+	end,
+})
