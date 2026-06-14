@@ -182,7 +182,7 @@ hl.device({
 
 ---- KEYBINDINGS ----
 
-local mainMod = "SUPER" -- Sets Left ALT
+mainMod = "SUPER" -- Sets Left ALT
 require("mainmod")
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
@@ -235,7 +235,7 @@ end
 
 local function zoom_reset()
 	zoom_increment = 0.1
-	hl.config({ cursor = { zoom_factor = 1 } })
+	hl.config({ cursor = { zoom_factor = 0.99 } })
 end
 
 hl.bind(mainMod .. " + EQUAL", zoom_in)
