@@ -26,3 +26,10 @@ vim.api.nvim_create_autocmd("VimEnter", {
 		end
 	end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "man",
+    callback = function()
+        vim.wo.number = true
+    end,
+})
