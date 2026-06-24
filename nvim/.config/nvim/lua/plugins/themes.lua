@@ -1,5 +1,8 @@
 return {
 	{
+		"aliqyan-21/darkvoid.nvim",
+	},
+	{
 		"D0nw0r/dark2026.nvim"
 	},
 	{
