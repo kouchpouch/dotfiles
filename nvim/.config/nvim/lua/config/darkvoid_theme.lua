@@ -64,4 +64,5 @@ require('darkvoid').setup({
         hint = "#bedc74",
         info = "#7fa1c3",
     },
+	vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#0f0f0f" })
 })
