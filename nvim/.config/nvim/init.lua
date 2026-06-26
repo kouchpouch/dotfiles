@@ -10,10 +10,18 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end,
 })
 
+vim.g.c_syntax_for_h = 1
+vim.filetype.add({
+  extension = {
+    h = "c",
+  },
+})
+
 require("options")
 require("keybinds")
 require("plugins.themes")
 require("plugins.lsp")
+require("plugins.dap")
 require("config.lazy")
 require("config.modus_theme")
 require("config.darkvoid_theme")

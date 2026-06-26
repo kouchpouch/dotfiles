@@ -91,6 +91,15 @@ return {
 	matching = { disallow_symbol_nonprefix_matching = false }
 	})
 
+	vim.lsp.config('clangd', {
+		init_options = {
+			-- This disables C++ on .h files.
+			fallbackFlags = { "-xc" },
+		},
+	capabilities = require('cmp_nvim_lsp').default_capabilities()
+	})
+	vim.lsp.enable('clangd')
+
 --	vim.lsp.config('<YOUR_LSP_SERVER>', {
 --	capabilities = require('cmp_nvim_lsp').default_capabilities()
 --	})

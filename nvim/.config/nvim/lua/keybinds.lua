@@ -30,6 +30,11 @@ vim.keymap.set('n', '<C-w><C-c>', '<nop>')
 -- disappear. I use CTRL-C almost exclusively and this bugged me.
 vim.keymap.set({'n', 'v', 'i'}, '<C-c>', '<esc>')
 
+-- Set all backslashes in visual line to be set to column 80. Perfect when
+-- using function like macros in C.
+vim.keymap.set('v', '<Leader>\\', ":s/\\s*\\\\/\\=repeat(' ', 80 - virtcol('.')) . '\\'/g<CR> :noh<CR>", { silent = true })
+
+
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP actions',
   callback = function(event)
@@ -50,4 +55,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
   end
 })
-
