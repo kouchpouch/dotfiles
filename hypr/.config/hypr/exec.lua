@@ -17,5 +17,6 @@ hl.on("hyprland.start", function ()
 	hl.exec_cmd("hyprpaper") -- Wallpapers
 	hl.exec_cmd("sunsetr")   -- Color temperature changer in the AUR
 	hl.exec_cmd("sunsetr set static_temp=6500") -- Resets color on start
-	hl.exec_cmd("sleep 5 && waybar") 	 -- Status bar
+	hl.exec_cmd("sleep 1 && waybar") 	 -- Status bar
 end)
+
