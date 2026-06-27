@@ -42,4 +42,4 @@ add-zsh-hook precmd vcs_info
 setopt PROMPT_SUBST
 # PROMPT='%F{38}%n@%m%f:%F{38}%~%f%F{208}${vcs_info_msg_0_}%f$ '
 # PROMPT='%F{#07AFD7}%n@%m%f:%F{#07AFD7}%~%f%F{#F1641F}${vcs_info_msg_0_}%f$ '
-PROMPT='%F{#5277C3}%n@%m%f:%F{#7EBAE4}%~%f%F{#F1641F}%f$ '
+PROMPT='%F{#5277C3}%n@%m%f:%F{#7EBAE4}%~%f%F{#F1641F}${vcs_info_msg_0_}%f$ '
