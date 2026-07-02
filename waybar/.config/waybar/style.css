@@ -41,7 +41,7 @@
     color: @workspaces-active;
 	border-radius: 0;
     padding-left: 0.25em;
-    padding-right: 0.5em;
+    padding-right: 0.25em;
 }
 
 #workspaces button.active {
@@ -49,7 +49,7 @@
 	border-radius: 0;
 	border-bottom: 2px solid;
     padding-left: 0.25em;
-    padding-right: 0.5em;
+    padding-right: 0.25em;
 }
 
 #workspaces button.empty {

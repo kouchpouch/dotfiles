@@ -1,5 +1,11 @@
 return {
 	{
+		"vague-theme/vague.nvim",
+	},
+	{
+		"catppuccin/nvim", name = "catppuccin",
+	},
+	{
 		"aliqyan-21/darkvoid.nvim",
 	},
 	{

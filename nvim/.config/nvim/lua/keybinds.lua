@@ -25,6 +25,7 @@ vim.keymap.set('n', '<leader>no', ':noh<CR>')
 vim.keymap.set('n', '<C-w>q', '<nop>')
 vim.keymap.set('n', '<C-w>c', '<nop>')
 vim.keymap.set('n', '<C-w><C-c>', '<nop>')
+vim.keymap.set('n', '<F1>', '<nop>')
 
 -- Make "CTRL-C" behave the exact same as <esc>, makes the LSP diagnostics not
 -- disappear. I use CTRL-C almost exclusively and this bugged me.

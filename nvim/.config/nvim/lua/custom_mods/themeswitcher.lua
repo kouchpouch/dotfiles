@@ -11,7 +11,7 @@ local themes = {
 local l_themes = {
 	"nightfly",
 	"tomorrow_night",
-	"auto",
+	"tomorrow_night",
 	"modus",
 	"modus",
 }
