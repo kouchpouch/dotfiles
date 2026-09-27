@@ -3,7 +3,7 @@ local TS = require("custom_mods.switcher")
 local themes = {
 	"nightfly",
 	"lunaperche",
-	"darkvoid",
+	"tokyonight-night",
 	"modus",
 	"lunaperche",
 }
@@ -11,7 +11,7 @@ local themes = {
 local l_themes = {
 	"nightfly",
 	"tomorrow_night",
-	"tomorrow_night",
+	"tokyonight",
 	"modus",
 	"modus",
 }
