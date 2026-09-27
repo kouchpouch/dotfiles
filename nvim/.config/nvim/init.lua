@@ -24,7 +24,6 @@ require("plugins.lsp")
 require("plugins.dap")
 require("config.lazy")
 require("config.modus_theme")
-require("config.darkvoid_theme")
 require("config.lualine")
 vim.opt.termguicolors = true
 
