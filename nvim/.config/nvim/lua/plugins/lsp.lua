@@ -29,6 +29,7 @@ return {
 				"pylsp",
 				"vimls",
 				"neocmake",
+				"rust_analyzer",
 				"docker_compose_language_service",
 			},
 		}
