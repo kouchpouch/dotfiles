@@ -93,7 +93,7 @@ return {
 
 	vim.lsp.config('clangd', {
 		init_options = {
-			-- This disables C++ on .h files.
+			-- This disables C++.
 			fallbackFlags = { "-xc" },
 		},
 	capabilities = require('cmp_nvim_lsp').default_capabilities()
