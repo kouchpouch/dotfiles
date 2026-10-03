@@ -6,9 +6,6 @@ return {
 		"catppuccin/nvim", name = "catppuccin",
 	},
 	{
-		"D0nw0r/dark2026.nvim"
-	},
-	{
 		"mofiqul/vscode.nvim"
 	},
 	{
