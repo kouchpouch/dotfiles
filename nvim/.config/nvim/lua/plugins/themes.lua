@@ -15,6 +15,9 @@ return {
 		"folke/tokyonight.nvim",
 	},
 	{
+		"savq/melange-nvim",
+	},
+	{
 		"bluz71/vim-nightfly-colors",
 		name = "nightfly",
 		lazy = false,
