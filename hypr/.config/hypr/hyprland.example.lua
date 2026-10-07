@@ -15,7 +15,7 @@ require("monitors")
 
 ---- MY PROGRAMS ----
 local terminal    = "kitty"
-local fileManager = "nemo"
+local fileManager = "dolphin"
 local menu        = "rofi -show drun"
 local browser     = "firefox"
 
@@ -44,8 +44,8 @@ hl.config({
         border_size = 2,
 
         col = {
-            active_border = "rgba(ffffff88)", -- #ffffff
-            inactive_border = "rgba(262625aa)", -- #262625
+            active_border = "rgba(6c6f85ff)", -- #6c6f85
+            inactive_border = "rgba(4c4f69aa)", -- #4c4f69
         },
 
 		-- Set to true to enable resizing windows by clicking 
@@ -93,25 +93,25 @@ hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1} 
 -- Default springs
 hl.curve("easy",           { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
 
-hl.animation({ leaf = "global",        enabled = true,  speed = 10,   bezier = "default" })
-hl.animation({ leaf = "border",        enabled = true,  speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows",       enabled = true,  speed = 3, bezier = "default" })
-hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 3,  bezier = "default",         style = "popin 87%" })
+hl.animation({ leaf = "global",        enabled = true,   speed = 10,    bezier = "default" })
+hl.animation({ leaf = "border",        enabled = true,   speed = 5.39,  bezier = "easeOutQuint" })
+hl.animation({ leaf = "windows",       enabled = true,   speed = 3,     bezier = "default" })
+hl.animation({ leaf = "windowsIn",     enabled = true,   speed = 3,     bezier = "default",      style = "popin 87%" })
 --hl.animation({ leaf = "windows",       enabled = true,  speed = 4.79, spring = "easy" })
 --hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 4.1,  spring = "easy",         style = "popin 87%" })
-hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 1.49, bezier = "linear",       style = "popin 87%" })
-hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 1.73, bezier = "almostLinear" })
-hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 1.46, bezier = "almostLinear" })
-hl.animation({ leaf = "fade",          enabled = true,  speed = 3.03, bezier = "quick" })
-hl.animation({ leaf = "layers",        enabled = true,  speed = 3.81, bezier = "easeOutQuint" })
-hl.animation({ leaf = "layersIn",      enabled = true,  speed = 4,    bezier = "easeOutQuint", style = "fade" })
-hl.animation({ leaf = "layersOut",     enabled = true,  speed = 1.5,  bezier = "linear",       style = "fade" })
-hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 1.79, bezier = "almostLinear" })
-hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 1.39, bezier = "almostLinear" })
-hl.animation({ leaf = "workspaces",    enabled = false,  speed = 1.94, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "workspacesIn",  enabled = false,  speed = 1.21, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "workspacesOut", enabled = false,  speed = 1.94, bezier = "almostLinear", style = "fade" })
-hl.animation({ leaf = "zoomFactor",    enabled = false,  speed = 7,    bezier = "quick" })
+hl.animation({ leaf = "windowsOut",    enabled = true,   speed = 1.49,  bezier = "linear",       style = "popin 87%" })
+hl.animation({ leaf = "fadeIn",        enabled = true,   speed = 1.73,  bezier = "almostLinear" })
+hl.animation({ leaf = "fadeOut",       enabled = true,   speed = 1.46,  bezier = "almostLinear" })
+hl.animation({ leaf = "fade",          enabled = true,   speed = 3.03,  bezier = "quick" })
+hl.animation({ leaf = "layers",        enabled = true,   speed = 3.81,  bezier = "easeOutQuint" })
+hl.animation({ leaf = "layersIn",      enabled = true,   speed = 4,     bezier = "easeOutQuint", style = "fade" })
+hl.animation({ leaf = "layersOut",     enabled = true,   speed = 1.5,   bezier = "linear",       style = "fade" })
+hl.animation({ leaf = "fadeLayersIn",  enabled = true,   speed = 1.79,  bezier = "almostLinear" })
+hl.animation({ leaf = "fadeLayersOut", enabled = true,   speed = 1.39,  bezier = "almostLinear" })
+hl.animation({ leaf = "workspaces",    enabled = false,  speed = 1.94,  bezier = "almostLinear", style = "fade" })
+hl.animation({ leaf = "workspacesIn",  enabled = false,  speed = 1.21,  bezier = "almostLinear", style = "fade" })
+hl.animation({ leaf = "workspacesOut", enabled = false,  speed = 1.94,  bezier = "almostLinear", style = "fade" })
+hl.animation({ leaf = "zoomFactor",    enabled = false,  speed = 7,     bezier = "quick" })
 
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
@@ -138,11 +138,9 @@ hl.config({
 
 hl.config({
     misc = {
-        force_default_wallpaper = 0,
-		-- Disables the hyprland logo
-        disable_hyprland_logo   = true,
-		-- Disables the message of the day
-		disable_splash_rendering = true
+        force_default_wallpaper  = 0,
+        disable_hyprland_logo    = true,
+		disable_splash_rendering = true -- Disables the message of the day
     },
 })
 
@@ -185,8 +183,8 @@ hl.device({
 
 ---- KEYBINDINGS ----
 
-local mainMod = "LALT" -- Sets Left ALT
-require("mainmod")
+mainMod = "ALT"    -- Sets Left ALT
+require("mainmod") -- Override
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(terminal))
@@ -238,7 +236,7 @@ end
 
 local function zoom_reset()
 	zoom_increment = 0.1
-	hl.config({ cursor = { zoom_factor = 0.99 } })
+	hl.config({ cursor = { zoom_factor = 0.99 } }) -- Not sure why, but setting back to 1 causes flickering
 end
 
 hl.bind(mainMod .. " + EQUAL", zoom_in)
