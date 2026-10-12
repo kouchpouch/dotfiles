@@ -1,11 +1,12 @@
 /* Nightfly Colors https://github.com/bluz71/vim-nightfly-colors */
+
 @define-color red-norm #FC514E;
 @define-color green-norm #A1CD5E;
 @define-color yellow-norm #E3D18A;
 @define-color blue-norm #82AAFF;
 @define-color purple-norm #C792EA;
 @define-color cyan-norm #7FDBCA;
-@define-color white-norm #A1AAB8;
+@define-color white-norm #6C6F85;
 
 @define-color red-bright #FF5874;
 @define-color green-bright #21C7A8;
@@ -26,7 +27,7 @@
 }
 
 #custom-spacer {
-	color: gray;
+	color: @white-norm;
 	font-size:20px;
 }
 
