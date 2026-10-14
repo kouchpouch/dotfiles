@@ -35,6 +35,13 @@ hl.window_rule({
 
 hl.window_rule({
   match = {
+    class = "[vV]lc",
+  },
+  opaque = true;
+})
+
+hl.window_rule({
+  match = {
     class = "org.kde.dolphin",
   },
   opaque = true;
