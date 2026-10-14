@@ -1,0 +1,15 @@
+# font_family Iosevka TN NL
+font_family Iosevka TN
+font_size 21
+cursor_shape block
+shell_integration no-cursor
+scrollback_lines 10000
+# cursor yellow3
+# background #0a0a0b
+
+# resize running program instantly
+resize_debounce_time 0 0
+
+# prevents jiggly text due to previous line
+placement_strategy top-left 
+
