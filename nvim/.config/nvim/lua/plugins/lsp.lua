@@ -31,6 +31,14 @@ return {
 				"neocmake",
 				"rust_analyzer",
 				"docker_compose_language_service",
+				"ts_ls",
+				"cssls",
+				"intelephense",
+				"laravel_ls",
+				"laravel_lsp",
+				"tailwindcss",
+				"qmlls",
+				"fortls"
 			},
 		}
 	-- Removes the 'undefined global "vim" error'
@@ -100,6 +108,26 @@ return {
 	capabilities = require('cmp_nvim_lsp').default_capabilities()
 	})
 	vim.lsp.enable('clangd')
+
+	vim.lsp.config('tailwindcss', {
+	capabilities = require('cmp_nvim_lsp').default_capabilities()
+	})
+	vim.lsp.enable('tailwindcss')
+
+	vim.lsp.config('ts_ls', {
+		filetypes = {
+			'javascript',
+			'typescript',
+			'blade',
+		};
+	capabilities = require('cmp_nvim_lsp').default_capabilities()
+	})
+	vim.lsp.enable('ts_ls')
+
+	vim.lsp.config('fortls', {
+	capabilities = require('cmp_nvim_lsp').default_capabilities()
+	})
+	vim.lsp.enable('fortls')
 
 --	vim.lsp.config('<YOUR_LSP_SERVER>', {
 --	capabilities = require('cmp_nvim_lsp').default_capabilities()
