@@ -40,7 +40,7 @@ inputbar {
 }
 
 prompt {
-    text-color: @fg2;
+    text-color: @mode;
 }
 
 entry {
