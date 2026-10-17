@@ -1,2 +1,1 @@
--- mainMod = "ALT"
-mainMod = "SUPER"
+MainMod = "SUPER"
