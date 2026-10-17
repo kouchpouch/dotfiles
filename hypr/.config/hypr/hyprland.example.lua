@@ -33,13 +33,13 @@ hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 
 ----- PERMISSIONS -----
 
----- LOOK AND FEEL ----
+----- LOOK AND FEEL -----
 
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in  = 4,
-        gaps_out = 4,
+        gaps_in  = 2,
+        gaps_out = 2,
 
         border_size = 2,
 
@@ -56,12 +56,14 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 4,
-        rounding_power = 2,
+        rounding       = 0,
+        rounding_power = 0,
 
         -- Change transparency of focused and unfocused windows
-        active_opacity   = 0.93,
-        inactive_opacity = 0.90,
+        active_opacity   = 1;
+        inactive_opacity = 1;
+--        active_opacity   = 0.93,
+--        inactive_opacity = 0.90,
 
         shadow = {
             enabled      = true,
@@ -138,9 +140,11 @@ hl.config({
 
 hl.config({
     misc = {
-        force_default_wallpaper  = 0,
-        disable_hyprland_logo    = true,
-		disable_splash_rendering = true -- Disables the message of the day
+        force_default_wallpaper = 0,
+		-- Disables the hyprland logo
+        disable_hyprland_logo   = true,
+		-- Disables the message of the day
+		disable_splash_rendering = true
     },
 })
 
@@ -148,13 +152,13 @@ hl.config({
 
 hl.config({
     input = {
-        kb_layout  = "us",
-        kb_variant = "",
-        kb_model   = "",
-        kb_options = "",
-        kb_rules   = "",
-        follow_mouse = 1,
-        sensitivity = 0, -- -1.0 - 1.0
+        kb_layout     = "us",
+        kb_variant    = "",
+        kb_model      = "",
+        kb_options    = "",
+        kb_rules      = "",
+        follow_mouse  = 1,
+        sensitivity   = 0, -- -1.0 - 1.0
 		accel_profile = "flat",
 
 		-- repeat_rate and repeat_delay make all keyboard-repeat (holding down
@@ -183,43 +187,43 @@ hl.device({
 
 ---- KEYBINDINGS ----
 
-mainMod = "ALT"    -- Sets Left ALT
+MainMod = "ALT"    -- Sets Left ALT
 require("mainmod") -- Override
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized" }))
-hl.bind(mainMod .. "+ SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
---hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(MainMod .. " + C", hl.dsp.exec_cmd(terminal))
+hl.bind(MainMod .. " + Q", hl.dsp.window.close())
+hl.bind(MainMod .. " + SHIFT + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(MainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(MainMod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(MainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(MainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(MainMod .. " + P", hl.dsp.window.pseudo())
+hl.bind(MainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized" }))
+hl.bind(MainMod .. "+ SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
+--hl.bind(MainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
 -- Move focus
-hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
+hl.bind(MainMod .. " + H", hl.dsp.focus({ direction = "left" }))
+hl.bind(MainMod .. " + L", hl.dsp.focus({ direction = "right" }))
+hl.bind(MainMod .. " + K", hl.dsp.focus({ direction = "up" }))
+hl.bind(MainMod .. " + J", hl.dsp.focus({ direction = "down" }))
 
 -- Focus the next window according to the layout
-hl.bind(mainMod .. " + W", hl.dsp.window.cycle_next())
+hl.bind(MainMod .. " + W", hl.dsp.window.cycle_next())
 
 -- Swap windows
-hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.swap({ direction = "left" }))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.swap({ direction = "right" }))
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.swap({ direction = "up" }))
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.swap({ direction = "down" }))
+hl.bind(MainMod .. " + SHIFT + H", hl.dsp.window.swap({ direction = "left" }))
+hl.bind(MainMod .. " + SHIFT + L", hl.dsp.window.swap({ direction = "right" }))
+hl.bind(MainMod .. " + SHIFT + K", hl.dsp.window.swap({ direction = "up" }))
+hl.bind(MainMod .. " + SHIFT + J", hl.dsp.window.swap({ direction = "down" }))
 
--- Switch workspaces with mainMod + [0-9]
--- Move active window to a workspace with mainMod + SHIFT + [0-9]
+-- Switch workspaces with MainMod + [0-9]
+-- Move active window to a workspace with MainMod + SHIFT + [0-9]
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
-    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+    hl.bind(MainMod .. " + " .. key,         hl.dsp.focus({ workspace = i}))
+    hl.bind(MainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
 local max_zoom = 10.0
@@ -239,20 +243,20 @@ local function zoom_reset()
 	hl.config({ cursor = { zoom_factor = 0.99 } }) -- Not sure why, but setting back to 1 causes flickering
 end
 
-hl.bind(mainMod .. " + EQUAL", zoom_in)
-hl.bind(mainMod .. " + MINUS", zoom_reset)
+hl.bind(MainMod .. " + EQUAL", zoom_in)
+hl.bind(MainMod .. " + MINUS", zoom_reset)
 
 -- Example special workspace (scratchpad)
---hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
---hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+--hl.bind(MainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
+--hl.bind(MainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
--- Scroll through existing workspaces with mainMod + scroll
---hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
---hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
+-- Scroll through existing workspaces with MainMod + scroll
+--hl.bind(MainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
+--hl.bind(MainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
--- Move/resize windows with mainMod + LMB/RMB and dragging
-hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
-hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+-- Move/resize windows with MainMod + LMB/RMB and dragging
+hl.bind(MainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
+hl.bind(MainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
@@ -270,14 +274,16 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 
 -- Hyprshot
 -- Take screenshot of region
-hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots"))
+--hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots"))
 
 -- Take screenshot of entire monitor
-hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots"))
+--hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots"))
 
 -- If you use zipline (a self hosted image sharing application), this will run the zipline script to upload your screenshot. Adjust this as required.
---hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
---hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
+hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
+hl.bind("CTRL + SHIFT + 3", hl.dsp.exec_cmd("hyprshot -m region -o /home/$USER/Pictures/screenshots")) -- Do not upload
+hl.bind("CTRL + SHIFT + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots -- /home/$USER/Pictures/screenshots/zipline-script-file.sh"))
+hl.bind("CTRL + SHIFT + 1", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o /home/$USER/Pictures/screenshots")) -- Do not upload
 
 ---- WINDOWS AND WORKSPACES ----
 
@@ -327,7 +333,11 @@ hl.window_rule({
 -- with a 4:3 aspect ratio stretched onto a 16:9 display. 
 -- This requires the hyprland plugin to be installed, see their documentation 
 -- for more details.
-function setup_vkfix()
+
+-- Steam launch options:
+-- SDL_VIDEO_DRIVER=wayland %command%
+-- Go into game and set your desired resolution with "FULLSCREEN WINDOWED"
+function Setup_vkfix()
     if hl.plugin.csgo_vulkan_fix ~= nil then
         hl.plugin.csgo_vulkan_fix.vkfix_app({ app = "SDL Application", w = 1920, h = 1440 })
         hl.config({
