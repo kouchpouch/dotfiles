@@ -129,6 +129,11 @@ return {
 	})
 	vim.lsp.enable('fortls')
 
+	vim.lsp.config('intelephense', {
+	capabilities = require('cmp_nvim_lsp').default_capabilities()
+	})
+	vim.lsp.enable('intelephense')
+
 --	vim.lsp.config('<YOUR_LSP_SERVER>', {
 --	capabilities = require('cmp_nvim_lsp').default_capabilities()
 --	})
