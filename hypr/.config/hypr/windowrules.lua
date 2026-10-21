@@ -1,4 +1,5 @@
 hl.window_rule({
+	name = "Border color fullscreen",
 	match = {
 		fullscreen_state_internal = 1, -- If maximized
 	},
@@ -6,48 +7,15 @@ hl.window_rule({
 })
 
 hl.window_rule({
-  match = {
-    class = "[fF]irefox",
-  },
-  opaque = true
-})
-
-hl.window_rule({
-  match = {
-    class = "[dD]iscord",
-  },
-  opaque = true
-})
-
-hl.window_rule({
-  match = {
-    class = "[sP]potify",
-  },
-  opaque = true
-})
-
-hl.window_rule({
-  match = {
-    class = "[nN]emo",
-  },
-  opaque = true
-})
-
-hl.window_rule({
-  match = {
-    class = "[vV]lc",
-  },
-  opaque = true;
-})
-
-hl.window_rule({
-  match = {
-    class = "org.kde.dolphin",
-  },
-  opaque = true;
+	name = "No float file-picker",
+	match = {
+	class = "org.freedesktop.impl.portal.desktop.kde"
+	},
+	float = false
 })
 
 hl.layer_rule({
+	name = "Disable rofi animations",
 	match = {
 		namespace = "rofi",
 	},
