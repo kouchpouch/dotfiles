@@ -26,6 +26,15 @@
     margin: 0;
 }
 
+#clock.1,
+#clock.3 {
+	color: #A6AEBB;
+}
+
+#clock.2 {
+	color: @white-bright;
+}
+
 #custom-spacer {
 	color: @white-norm;
 	font-size:20px;

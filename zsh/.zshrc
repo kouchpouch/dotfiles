@@ -26,11 +26,12 @@ autoload -Uz add-zsh-hook
 
 # 2. Set the styles (important: enable git explicitly)
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git:*' formats '  %b'
+# zstyle ':vcs_info:git:*' formats '  %b'
+zstyle ':vcs_info:git:*' formats ':%F{#F1641F}%b%f'
 
 # 3. Use add-zsh-hook instead of a manual precmd function
 add-zsh-hook precmd vcs_info
 
 setopt PROMPT_SUBST
-# PROMPT='%F{#07AFD7}%n@%m%f:%F{#07AFD7}%~%f%F{#F1641F}${vcs_info_msg_0_}%f$ '
-PROMPT='%F{#5277C3}%n@%m%f:%F{#7EBAE4}%~%f%F{#F1641F}${vcs_info_msg_0_}%f$ '
+# PROMPT='%F{#5277C3}%n@%m%f:%F{#7EBAE4}%~%f%F{#F1641F}${vcs_info_msg_0_}%f$ '
+PROMPT='%F{#5277C3}%n@%m%f:%F{#7EBAE4}%~%f${vcs_info_msg_0_}$ '
